@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+
+    <style>
+      body {
+        margin: 0;
+        background-color: #e0e0e0;
+        font-weight: bold;
+        font-family: monospace;
+      }
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        gap: 10px;
+        border-radius: 50px;
+        background: linear-gradient(145deg, #f0f0f0, #cacaca);
+        box-shadow: 30px 30px 59px #bebebe, -30px -30px 59px #ffffff;
+      }
+
+      .email,
+      .password {
+        display: flex;
+        flex-direction: column;
+        font-size: 24px;
+        gap: 5px;
+      }
+
+      .email input,
+      .password input {
+        height: 20px;
+        width: 300px;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        padding: 10px;
+        font-size: 20px;
+
+        border-radius: 50px;
+        background: #e0e0e0;
+        box-shadow: inset 30px 30px 59px #bebebe, inset -30px -30px 59px #ffffff;
+      }
+      .button input {
+        float: right;
+        width: 100px;
+        color: white;
+        border-radius: 25px;
+        border: none;
+        outline: none;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 50px;
+        background: linear-gradient(145deg, #2e02f0, #3e10e4);
+        box-shadow: 30px 30px 59px #bebebe, -30px -30px 59px #ffffff;
+        cursor: pointer;
+        transition: 0.2s ease;
+      }
+
+      .button:hover input {
+        width: 105px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="email">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" />
+        </div>
+        <div class="password">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" />
+        </div>
+        <div class="button">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

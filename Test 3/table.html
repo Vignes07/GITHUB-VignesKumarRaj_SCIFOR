@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+
+    <style>
+      .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+      }
+      table {
+        border-collapse: collapse;
+        font-size: 24px;
+        min-width: 400px;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      }
+
+      th {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+      }
+
+      th,
+      td {
+        padding: 10px;
+      }
+      footer {
+        font-size: 24px;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <tr>
+          <th>Product name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+        </tr>
+        <tr>
+          <td>Biscuit</td>
+          <td>20</td>
+          <td>300</td>
+        </tr>
+        <tr>
+          <td>Cake</td>
+          <td>15</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Juice</td>
+          <td>40</td>
+          <td>72</td>
+        </tr>
+        <tr>
+          <td>Chocolate</td>
+          <td>100</td>
+          <td>120</td>
+        </tr>
+      </table>
+    </div>
+    <footer>Total Price : 175</footer>
+  </body>
+</html>
