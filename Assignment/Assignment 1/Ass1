@@ -1,0 +1,20 @@
+1.What is HTML?
+HTML (HyperText Markup Language) is a markup language used to create web pages.It is a combination of Hypertext and Markup language.
+
+2.Are the HTML tags and Elements the same thing?
+No, HTML Tags are used to define element of the webpage using opening and closing tag. HTML Elements have opening tag, contents and closing tag.
+
+3.What are the tags and attributes in HTML?
+HTML Tags are used to define element of the webpage using opening and closing tag.
+HTML Attributes provides properties to HTML elements.
+
+4.What are void elememts in HTML?
+Void elements does not contains any content or closing tag.
+eg. <br>, <hr>, <img>
+
+5.What is the feature of HTML?
+HTML is a markup language, platform independent, and provide easy interface for users.
+
+6.Diff between HTML vs XHTML?
+HTML is a markup language used to create web pages.It is a combination of Hypertext and Markup language.
+XHTML is an extension of HTML and is strict in syntax. XHTML is an XML application and will not tolerate any errors in the syntax.
