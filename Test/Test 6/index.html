@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites/dist/css/foundation.min.css"
+    />
+  </head>
+  <body>
+    <div class="grid-container">
+      <div
+        class="grid-x grid-padding-x align-center align-middle"
+        style="min-height: 100vh"
+      >
+        <div class="medium-6 cell">
+          <div class="secondary callout">
+            <form data-abide>
+              <div class="grid-y grid-padding-y">
+                <div class="cell">
+                  <label
+                    >First Name
+                    <input
+                      type="text"
+                      placeholder="Enter your first name"
+                      required
+                    />
+                  </label>
+                </div>
+              </div>
+              <div class="grid-y grid-padding-y">
+                <div class="cell">
+                  <label
+                    >Last Name
+                    <input
+                      type="text"
+                      placeholder="Enter your last name"
+                      required
+                    />
+                  </label>
+                </div>
+              </div>
+
+              <div class="grid-y grid-padding-y">
+                <div class="cell">
+                  <label
+                    >Email
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </label>
+                </div>
+              </div>
+
+              <div class="grid-y grid-padding-y">
+                <div class="cell">
+                  <label
+                    >Password
+                    <input
+                      type="password"
+                      placeholder="Enter your password"
+                      required
+                    />
+                  </label>
+                </div>
+              </div>
+
+              <div class="grid-y grid-padding-y">
+                <div class="cell text-right">
+                  <button type="submit" class="button alert">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites/dist/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
