@@ -1,5 +1,5 @@
 let num = 10;
-let str = "";
+let str = "10";
 let bool = true;
 let undefined;
 let nul = null;

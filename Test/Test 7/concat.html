@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concat</title>
+  </head>
+  <body>
+    <h1>Concat</h1>
+
+    <input type="text" placeholder="String 1" id="str1" />
+    <input type="text" placeholder="String 2" id="str2" />
+
+    <button>Merge</button>
+
+    <h2>Output: <span id="output"></span></h2>
+
+    <script>
+      document.querySelector("button").addEventListener("click", () => {
+        let str1 = document.getElementById("str1").value;
+        let str2 = document.getElementById("str2").value;
+        document.getElementById("output").innerText = str1.concat(str2);
+      });
+    </script>
+  </body>
+</html>
