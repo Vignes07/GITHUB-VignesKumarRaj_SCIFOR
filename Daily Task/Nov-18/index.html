@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .calculator {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      #num1,
+      #num2 {
+        width: 150px;
+        height: 50px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 32px;
+      }
+
+      .operations {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .button {
+        width: 100px;
+        height: 30px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculator</h1>
+      <div class="calculator">
+        <div class="inputs">
+          <input type="text" name="num1" id="num1" required />
+          <input type="text" name="num2" id="num2" required />
+        </div>
+        <div class="operations">
+          <button class="button" onclick="add()">+</button>
+          <button class="button" onclick="subtract()">-</button>
+          <button class="button" onclick="multiply()">*</button>
+          <button class="button" onclick="divide()">/</button>
+        </div>
+      </div>
+
+      <h2>Result: <span id="result"></span></h2>
+    </div>
+
+    <script>
+      function add() {
+        const num1 = parseFloat(document.getElementById("num1").value);
+        const num2 = parseFloat(document.getElementById("num2").value);
+        if (!num1 || !num2) {
+          alert("Please enter both numbers.");
+        } else {
+          const result = num1 + num2;
+          document.getElementById("result").innerText = result;
+        }
+      }
+
+      function subtract() {
+        const num1 = parseFloat(document.getElementById("num1").value);
+        const num2 = parseFloat(document.getElementById("num2").value);
+        if (!num1 || !num2) {
+          alert("Please enter both numbers.");
+        } else {
+          const result = num1 - num2;
+          document.getElementById("result").innerText = result;
+        }
+      }
+
+      function multiply() {
+        const num1 = parseFloat(document.getElementById("num1").value);
+        const num2 = parseFloat(document.getElementById("num2").value);
+        if (!num1 || !num2) {
+          alert("Please enter both numbers.");
+        } else {
+          const result = num1 * num2;
+          document.getElementById("result").innerText = result;
+        }
+      }
+
+      function divide() {
+        const num1 = parseFloat(document.getElementById("num1").value);
+        const num2 = parseFloat(document.getElementById("num2").value);
+        if (!num1 || !num2) {
+          alert("Please enter both numbers.");
+        } else {
+          const result = num1 / num2;
+          document.getElementById("result").innerText = result;
+        }
+      }
+    </script>
+  </body>
+</html>
