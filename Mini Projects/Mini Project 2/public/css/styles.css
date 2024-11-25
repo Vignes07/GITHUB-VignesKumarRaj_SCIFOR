@@ -19,13 +19,17 @@ body {
 }
 
 .navbar {
-  position: fixed;
   display: flex;
   justify-content: space-between;
   height: 5rem;
   width: -webkit-fill-available;
   background-color: white;
   z-index: 1;
+}
+
+.navbar-brand,
+.navbar-toggler {
+  margin: 0 3rem;
 }
 
 .navbar-brand {
