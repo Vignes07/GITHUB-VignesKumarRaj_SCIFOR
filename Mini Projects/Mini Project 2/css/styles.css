@@ -94,12 +94,19 @@ section {
   font-weight: 700;
 }
 
+.home-data > a:hover,
+.send-btn:hover {
+  background-color: #4eabcc;
+  box-shadow: 0px 0px 106px -4px rgba(0, 0, 0, 0.75);
+  transition: all 0.5s ease-in-out;
+}
 .home-data > a,
 .send-btn {
   width: 7rem;
   background-color: #4eabcc;
   border: none;
   outline: none;
+  transition: all 0.5s ease-in-out;
 }
 
 .home-social > a {
