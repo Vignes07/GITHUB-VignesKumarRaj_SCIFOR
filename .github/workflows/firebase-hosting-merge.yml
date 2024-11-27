@@ -11,9 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SCIFOR_MINI_PROJECT_1 }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_72566 }}
           channelId: live
-          projectId: scifor-mini-project-1
+          projectId: portfolio-72566
