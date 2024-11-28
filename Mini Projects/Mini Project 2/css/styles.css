@@ -200,13 +200,6 @@ section {
   justify-content: center;
 }
 
-.card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
 /* For medium screens and above (md and lg), show images */
 @media (min-width: 768px) {
   .project-img {
@@ -244,7 +237,7 @@ section {
     font-size: 1.4rem;
   }
   .carousel-item .card {
-    height: 500px; /* Adjust as needed */
+    height: 500px;
   }
 }
 
