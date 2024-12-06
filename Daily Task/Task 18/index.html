@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search</title>
+  </head>
+  <body>
+    <h1>Search</h1>
+    <input type="text" placeholder="Search" id="search" />
+    <button id="btn" onclick="search()">Search</button>
+    <br />
+    <h1>Products</h1>
+    <p id="products"></p>
+    <script>
+      function search() {
+        let search = document.getElementById("search").value;
+        fetch(` search?q=${search}`)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            const productTemplate = (product) => `
+                 <div>
+                   <h2>${product.title}</h2>
+                   <p>Price: ${product.price}</p>
+                   <p>Description: ${product.description}</p>
+                 </div>
+               `;
+            data.products.forEach((product) => {
+              document.getElementById("products").innerHTML +=
+                productTemplate(product);
+            });
+          });
+      }
+    </script>
+  </body>
+</html>
