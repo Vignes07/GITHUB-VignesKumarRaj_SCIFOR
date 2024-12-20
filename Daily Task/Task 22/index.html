@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React App</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        gap: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      class Car extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            Name: "Raj",
+            Lname: "ssss",
+            Email: "bc@gmail.com",
+            BirthYear: 1998,
+          };
+        }
+
+        handleSubmit = (event) => {
+          event.preventDefault();
+          this.setState({
+            Name: event.target.Name.value,
+            Lname: event.target.Lname.value,
+            Email: event.target.Email.value,
+            BirthYear: event.target.BirthYear.value,
+          });
+        };
+
+        render() {
+          return (
+            <div>
+              <h1>
+                I am {this.state.Name} {this.state.Lname}
+              </h1>
+              <p>
+                My Email is {this.state.Email} and my birth year is{" "}
+                {this.state.BirthYear}.
+              </p>
+              <form onSubmit={this.handleSubmit}>
+                <input type="text" name="Name" placeholder="Name" />
+                <input type="text" name="Lname" placeholder="Last Name" />
+                <input type="email" name="Email" placeholder="Email" />
+                <input type="text" name="BirthYear" placeholder="Birth Year" />
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<Car />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
