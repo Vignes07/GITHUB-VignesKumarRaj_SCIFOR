@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React App</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        gap: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      class Person extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            name: "...",
+            lname: "...",
+            age: 0
+          };
+        }
+
+        handleSubmit = () => {
+          this.setState({
+            name: "Vignes",
+            lname: "M",
+            age: 24
+          });
+        };
+
+        render() {
+          return (
+            <div>
+              <h1>
+                Hi
+              </h1>
+              <p>
+                My Name is {this.state.name} {this.state.lname} and my age is{" "}
+                {this.state.age}.
+              </p>
+                <button onClick={this.handleSubmit}>Submit</button>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<Person />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
