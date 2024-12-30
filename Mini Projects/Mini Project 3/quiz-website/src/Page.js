@@ -1,9 +1,4 @@
-"use client";
 
-import { useState } from "react";
-import CategoriesComponent from "./components/Categories";
-import QuizComponent from "./components/Quiz";
-import ResultsComponent from "./components/Results";
 
 export default function Home() {
   const [stage, setStage] = useState("categories");
