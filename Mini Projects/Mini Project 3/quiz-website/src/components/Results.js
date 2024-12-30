@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Results({ score, totalQuestions, onRestart }) {
+function Results({ score, totalQuestions, onRestart }) {
   const percentage = Math.round((score / totalQuestions) * 100);
 
   return (
@@ -15,3 +15,5 @@ export default function Results({ score, totalQuestions, onRestart }) {
     </div>
   );
 }
+
+export default Results

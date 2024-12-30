@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function Quiz({ category, onQuizEnd }) {
+function Quiz({ category, onQuizEnd }) {
   const [questions, setQuestions] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -78,3 +78,5 @@ export default function Quiz({ category, onQuizEnd }) {
     </div>
   );
 }
+
+export default Quiz

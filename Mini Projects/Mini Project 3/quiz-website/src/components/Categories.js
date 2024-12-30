@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function Categories({ onSelectCategory }) {
+function Categories({ onSelectCategory }) {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -52,3 +52,5 @@ export default function Categories({ onSelectCategory }) {
     </div>
   );
 }
+
+export default Categories
