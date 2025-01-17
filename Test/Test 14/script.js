@@ -3,7 +3,16 @@ function formatString(str) {
   let lowerCase = str.toLowerCase();
   let substr = str.substring(2, 6);
 
-  console.log(upperCase, lowerCase, substr);
+  console.log(
+    "Upper Case : " +
+      upperCase +
+      "\n" +
+      "Lower Case : " +
+      lowerCase +
+      "\n" +
+      "Sub String of 2, 6 : " +
+      substr
+  );
 }
 
 formatString("HeLloWorlD");
