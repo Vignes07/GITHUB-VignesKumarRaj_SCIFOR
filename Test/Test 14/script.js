@@ -1,7 +1,7 @@
 function formatString(str) {
   let upperCase = str.toUpperCase();
   let lowerCase = str.toLowerCase();
-  let substr = str.substring(2, 6);
+  let substr = str.substring(2, 5);
 
   console.log(
     "Upper Case : " +
@@ -10,7 +10,7 @@ function formatString(str) {
       "Lower Case : " +
       lowerCase +
       "\n" +
-      "Sub String of 2, 6 : " +
+      "Sub String of 2, 5 : " +
       substr
   );
 }
