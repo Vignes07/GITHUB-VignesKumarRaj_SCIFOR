@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List (Context API)</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        #root {
+            max-width: 400px;
+            margin: auto;
+        }
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+        li {
+            background: #f8f9fa;
+            padding: 10px;
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        form {
+        	display: flex;
+            gap: 1rem;
+        }
+        button {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+        }
+        input {
+            padding: 8px;
+            width: 70%;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script type="text/babel">
+
+const TaskContext = React.createContext();
+
+const TaskProvider = ({ children }) => {
+    const [tasks, setTasks] = React.useState([]);
+
+    const addTask = (task) => {
+            setTasks([...tasks, task]);
+      
+    };
+
+    const removeTask = (index) => {
+        setTasks(tasks.filter((task, i) => i !== index));
+    };
+
+    return (
+        <TaskContext.Provider value={{ tasks, addTask, removeTask }}>
+            {children}
+        </TaskContext.Provider>
+    );
+};
+
+const TaskInput = () => {
+    const { addTask } = React.useContext(TaskContext);
+    const [task, setTask] = React.useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        addTask(task);
+        setTask("");
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <input
+                type="text"
+                value={task}
+                onChange={(e) => setTask(e.target.value)}
+                placeholder="Enter a task..."
+            />
+            <button type="submit">Add</button>
+        </form>
+    );
+};
+
+const TaskList = () => {
+    const { tasks, removeTask } = React.useContext(TaskContext);
+
+    return (
+        <ul>
+            {tasks.map((task, index) => (
+                <li key={index}>
+                    {task}
+                    <button onClick={() => removeTask(index)}>X</button>
+                </li>
+            ))}
+        </ul>
+    );
+};
+
+const App = () => {
+    return (
+        <TaskProvider>
+            <h2>To-Do List</h2>
+            <TaskInput />
+            <TaskList />
+        </TaskProvider>
+    );
+};
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+
+</script>
+
+</body>
+</html>
