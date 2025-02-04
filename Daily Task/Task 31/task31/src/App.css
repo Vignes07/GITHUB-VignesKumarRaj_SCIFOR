@@ -127,3 +127,7 @@ nav {
 .cart-buttons .remove-btn:hover {
   background-color: red;
 }
+
+.quantity {
+  padding: 0.5rem;
+}
